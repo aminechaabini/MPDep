@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mp-dep
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mp-dep
+  template:
+    metadata:
+      labels:
+        app: mp-dep
+    spec:
+      containers:
+      - name: mp-dep
+        image: feelsee/mp-dep:1.0
+        ports:
+        - containerPort: 3000
