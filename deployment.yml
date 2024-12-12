@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mp-dep
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: mp-dep
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: mp-dep
-        image: feelsee/mp-dep:1.1
+        image: feelsee/mp-dep:1.2
         ports:
         - containerPort: 3000
